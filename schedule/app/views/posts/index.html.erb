@@ -20,14 +20,14 @@
   <tr>
     <td><%= post.id %></td>
     <td><%= post.title %></td>
-    <td><%= post.start_day %></td>
-    <td><%= post.end_day %></td>
+    <td><%= post.start_day.strftime("%Y/%m/%d") %></td>
+    <td><%= post.end_day.strftime("%Y/%m/%d")%></td>
     <% if(post.all_day)%>
       <td>○</td>
     <% else %>
       <td></td>
     <% end %>
-    <td><%= post.created_at %></td>
+    <td><%= post.created_at.strftime("%Y/%m/%d %H:%M")  %></td>
     <td><%= link_to "参照",post %></td>
     <td><%= link_to "編集",[:edit,post]%></td>
     <td></td>
