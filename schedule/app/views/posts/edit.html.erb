@@ -1,27 +1,26 @@
-
 <div class = "FormContainer">
   <h3 class = "PageTitle" >予定の新規追加</h3>
 
   <%= form_with model:@post do |f| %>
-  <div class = "FormTitle">
+  <div class = "EditTitle">
     <%= f.label :title,"タイトル" ,class: "title"%>
     <%= f.text_field :title %>
   </div>
-  <div class = "FormDays">
+  <div class = "EditDays">
     <div class = "FormStartDay">
       <%= f.label :start_day,"開始日" %>
       <%= f.date_field :start_day %>
     </div>
-    <div class = "FormEndDay">
+    <div class = "EditEndDay">
       <%= f.label :end_day,"終了日" %>
-      <%= f.date_field :end_day %>s
+      <%= f.date_field :end_day %>
     </div>
   </div>
-  <div class = "FormAllDay">
-    <%= f.check_box :all_day,checked: false%>
+  <div class = "EditAllDay">
+    <%= f.check_box :all_day,checked: @post.all_day%>
     <%= f.label :all_day,"終日の場合はチェックを入れます"%>
   </div>
-  <div class = "FormMemo">
+  <div class = "EditMemo">
     <%= f.label :memo,"スケジュールメモ" %>
     <%= f.text_area :memo %>
   </div>

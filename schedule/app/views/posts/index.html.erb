@@ -1,6 +1,6 @@
 <h3>予定一覧</h3>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>ID</th>
@@ -9,6 +9,9 @@
       <th>終了日</th>
       <th>終日</th>
       <th>更新日時</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -19,12 +22,24 @@
     <td><%= post.title %></td>
     <td><%= post.start_day %></td>
     <td><%= post.end_day %></td>
-    <td><%= post.all_day %></td>
+    <% if(post.all_day)%>
+      <td>○</td>
+    <% else %>
+      <td></td>
+    <% end %>
     <td><%= post.created_at %></td>
+    <td><%= link_to "参照",post %></td>
+    <td><%= link_to "編集",[:edit,post]%></td>
+    <td></td>
+    </tr>
   </tr>
   <% end %>
 </tbody>
 </table>
 
 <p><%= link_to "新規追加", :new_post %></p>
-
+<% if flash[:notice] %>
+<div class = "flash">
+  <p class = "notice"><%= flash[:notice] %></p>
+</div>
+<% end %>

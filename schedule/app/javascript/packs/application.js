@@ -11,3 +11,12 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+window.jQuery = window.$ = require('jquery')
+
+import 'bootstrap';
+import '../stylesheets/application';
+//= require data-confirm-modal
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
