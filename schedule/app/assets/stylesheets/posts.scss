@@ -1,10 +1,67 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.FormContainer{
-  width : 100%;
+body {
+  color: #333;
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳＰゴシック","MS PGothic",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
-.PageTitle{
-  font-size:20px;
 
+.header{
+  background-color:#1C1D3B;
+  height: 50px;
+  margin-bottom: 30px;
+}
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.header-title{
+  color: white;
+  font-weight: 700;
+  }
+.header-title:hover{
+  color: white;
+  text-decoration: none;
+}
+.footer{
+  display: flex;
+  justify-content: end;
+}
+.footer p{
+  margin-left: 10px;
+}
+.conrainer{
+  max-width: 980;
+}
+.page-title{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.show-container{
+  width:50%;
+  margin: auto;
+}
+.links{
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 15px;
+}
+.form-container{
+  width: 50%;
+  margin: auto;
+}
+
+.buttons{
+  display: flex;
+  justify-content: end;
+}
+.btn{
+  margin-left: 5px;
 }
