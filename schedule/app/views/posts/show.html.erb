@@ -1,0 +1,29 @@
+<div class = "show-container">
+<h4><%= @post.title %></h4>
+<div class = "links">
+<%= link_to"← 一覧に戻る",:posts %>
+<%= link_to "編集" ,[:edit,@post]%>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>開始日</th>
+    <td><%= @post.start_day %></td>
+  </tr>
+  <tr>
+    <th>終了日</th>
+    <td><%= @post.end_day %></td>
+  </tr>
+  <tr>
+    <th>終日</th>
+    <% if @post.all_day %>
+      <td>○</td>
+    <% else %>
+      <td></td>
+    <% end %>
+  </tr>
+  <tr>
+    <th>スケジュールメモ</th>
+    <td><%= @post.memo %></td>
+  </tr>
+</table>
+</div>
